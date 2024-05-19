@@ -1,0 +1,205 @@
+// Imports
+@import url('https://fonts.googleapis.com/css2?family=Young+Serif&display=swap'); //Young-Serif
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Young+Serif&display=swap'); //Outfit
+
+// Variables
+$Nutmeg: hsl(14, 45%, 36%);
+$Dark-Raspberry: hsl(332, 51%, 32%);
+$White: hsl(0, 0%, 100%);
+$Rose-White: hsl(330, 100%, 98%);
+$Eggshell: hsl(30, 54%, 90%);
+$Light-Grey: hsl(30, 18%, 87%);
+$Wenge-Brown: hsl(30, 10%, 34%);
+$Dark-Charcoal: hsl(24, 5%, 18%);   
+
+// Global Styles
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $Eggshell;
+    width: 100dvw;
+    height: fit-content;
+    padding: 150px 20%;
+    overflow-x: hidden;
+    font-size: 16px;
+    transition: 1s ease-in-out;
+}
+
+h1 {
+    font-family: "Young Serif", Arial, Helvetica, sans-serif;
+    color: $Dark-Charcoal;
+}
+
+h2 {
+    font-family: "Young Serif", Arial, Helvetica, sans-serif;
+    color: $Nutmeg;
+    font-weight: normal;
+}
+
+p, td, li, h3 {
+    font-family: "Outfit", Arial, Helvetica, sans-serif;
+}
+
+
+// Menu Styles
+.menu-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: fit-content;
+    background-color: $White;
+    padding: 35px;
+    border-radius: 20px;
+    gap: 30px;
+
+    .menu-header {
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+
+        img {
+            width: 100%;
+            height: 100%;
+            border-radius: 12px;
+        }
+
+        h1 {
+            font-weight: normal;
+            font-size: 2.5em;
+        }
+
+        p {
+            color: $Wenge-Brown;
+        }
+    }
+
+
+    .info-container {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+
+        .preparation {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            background-color: $Rose-White;
+            padding: 30px 20px;
+            border-radius: 12px;
+            
+            h3 {
+                color: $Dark-Raspberry;
+            }
+
+            ul {
+                display: flex;
+                flex-direction: column;
+                gap: 8px;
+                margin-left: 20px;
+                color: $Wenge-Brown;
+            }
+
+            p {
+                margin-left: 18px;
+            }
+        }
+
+        .ingredients {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+
+            ul {
+                display: flex;
+                flex-direction: column;
+                gap: 8px;
+                color: $Wenge-Brown;
+                padding: 0px 21px;
+                
+                p {
+                    margin-left: 20px;
+                }
+
+            }
+        }
+
+        .instructions {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+
+            ol {
+                display: flex;
+                flex-direction: column;
+                gap: 12px;
+                font-weight: bold;
+                color: $Dark-Raspberry; 
+                padding: 0px 21px;
+                
+                p {
+                    font-weight: normal;
+                    color: $Wenge-Brown;
+                }
+            }
+        }
+
+        .nutrition {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+
+            p {
+                color: $Wenge-Brown;
+            }
+
+            table {
+                width: 100%;
+                align-self: flex-start;
+                font-family: "Outfit", Arial, Helvetica, sans-serif;
+
+                tr {
+                    display: flex;
+                    border-bottom: solid 2px $Light-Grey;
+                    padding: 10px 25px;
+
+                    &:last-child {
+                        border: none;
+                    }
+
+                    th {
+                        width: 50%;
+                        font-weight: normal;
+                        color: $Wenge-Brown;
+                        text-align: start;
+                    }
+
+                    td {
+                        width: 50%;
+                        color: $Nutmeg;
+                        font-weight: bold;
+                    }
+                }
+            }
+        }
+
+
+    }
+    
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 0px;
+    }
+
+    .menu-container {
+        border-radius: 0px;
+    }
+}
